@@ -22,6 +22,7 @@ Route::get('/teacher', function () {
     return "Hi, teacher. This is my 4-th lab work";
 });
 
+//Test route
 Route::get('/test/{name}/{surname?}', function ($name,$surname=' ') {
     return "Hello, " . $name . " " . $surname;
 })-> where('name','[a-zA-Z0-9]+');
