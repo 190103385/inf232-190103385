@@ -27,6 +27,7 @@ Route::get('/test/{name}/{surname?}', function ($name,$surname=' ') {
     return "Hello, " . $name . " " . $surname;
 })-> where('name','[a-zA-Z0-9]+');
 
+//Main route, which returns view
 Route::get('/lab4', function () {
     return view('user') -> with('name', 'Nurdaulet') -> with('surname', 'Kurmangazyuly');
 });
