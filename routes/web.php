@@ -17,10 +17,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Introduction route
+Route::get('/teacher', function () {
+    return "Hi, teacher. This is my 4-th lab work";
+});
+
 Route::get('/test/{name}/{surname?}', function ($name,$surname=' ') {
     return "Hello, " . $name . " " . $surname;
 })-> where('name','[a-zA-Z0-9]+');
 
-Route::get('/redir', function () {
-    return redirect("test");
+Route::get('/lab4', function () {
+    return view('user') -> with('name', 'Nurdaulet') -> with('surname', 'Kurmangazyuly');
 });
